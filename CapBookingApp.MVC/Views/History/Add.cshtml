@@ -1,0 +1,102 @@
+﻿@model ApplicationCore.Models.HistoryModel
+
+@{
+    ViewData["Title"] = "AddHistory";
+}
+
+<h1>Add new History</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Add">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BookingDate" class="control-label"></label>
+                <input asp-for="BookingDate" class="form-control" />
+                <span asp-validation-for="BookingDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BookingTime" class="control-label"></label>
+                <input asp-for="BookingTime" class="form-control" />
+                <span asp-validation-for="BookingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FromPlace" class="control-label"></label>
+                (please enter existed place id)
+                <input asp-for="FromPlace" class="form-control" />
+                <span asp-validation-for="FromPlace" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToPlace" class="control-label"></label>
+                (please enter existed place id)
+                <input asp-for="ToPlace" class="form-control" />
+                <span asp-validation-for="ToPlace" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PickUpAddress" class="control-label"></label>
+                <input asp-for="PickUpAddress" class="form-control" />
+                <span asp-validation-for="PickUpAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Landmark" class="control-label"></label>
+                <input asp-for="Landmark" class="form-control" />
+                <span asp-validation-for="Landmark" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PickupDate" class="control-label"></label>
+                <input asp-for="PickupDate" class="form-control" />
+                <span asp-validation-for="PickupDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PickupTime" class="control-label"></label>
+                (format: 12:34)
+                <input asp-for="PickupTime" class="form-control" />
+                <span asp-validation-for="PickupTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CabTypeId" class="control-label"></label>
+                (please enter existed cab id)
+                <input asp-for="CabTypeId" class="form-control" />
+                <span asp-validation-for="CabTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactNo" class="control-label"></label>
+                <input asp-for="ContactNo" class="form-control" />
+                <span asp-validation-for="ContactNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="comp_time" class="control-label"></label>
+                <input asp-for="comp_time" class="form-control" />
+                <span asp-validation-for="comp_time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="charge" class="control-label"></label>
+                <input asp-for="charge" class="form-control" />
+                <span asp-validation-for="charge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Feedback" class="control-label"></label>
+                <input asp-for="Feedback" class="form-control" />
+                <span asp-validation-for="Feedback" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="Index">Back to Homepage</a>
+</div>

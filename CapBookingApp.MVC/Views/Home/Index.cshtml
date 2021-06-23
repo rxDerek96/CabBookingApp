@@ -1,0 +1,21 @@
+﻿@model List<ApplicationCore.Models.CabModel>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="rounded">
+    <div class="container-fluid bg-light">
+        <div class="row">
+            @foreach (var cab in Model)
+            {
+                <a class="col-6 col-lg-3 col-sm-4 col-xl-2" asp-action="Bookings" asp-route-id="@cab.CabTypeId">
+                    @cab.CabTypeId @cab.CabTypeName
+
+                </a>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+﻿@model List<ApplicationCore.Models.BookingModel>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Booking order of Cab</h1>
+
+<div class="rounded">
+    <div class="container-fluid bg-light">
+        <div class="row">
+            @foreach (var b in Model)
+            {
+                <div class="col-6 col-lg-3 col-sm-4 col-xl-2">
+                    <a asp-controller="Booking" asp-action="Details" asp-route-id="@b.Id">
+                        @b.Id
+                    </a>
+
+                    @b.BookingDate
+
+                </div>
+            }
+        </div>
+    </div>
+</div>

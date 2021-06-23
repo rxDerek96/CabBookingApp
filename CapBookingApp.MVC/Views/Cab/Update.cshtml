@@ -1,0 +1,34 @@
+﻿@model ApplicationCore.Models.CabUpdateModel
+
+@{
+    ViewData["Title"] = "UpdateCab";
+}
+
+<h1>Update Existed Cab</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Update">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CabTypeName" class="control-label"></label>
+                (please enter existed cab name)
+                <input asp-for="CabTypeName" class="form-control" />
+                <span asp-validation-for="CabTypeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CabTypeNewName" class="control-label"></label>
+                <input asp-for="CabTypeNewName" class="form-control" />
+                <span asp-validation-for="CabTypeNewName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="Index">Back to Homepage</a>
+</div>

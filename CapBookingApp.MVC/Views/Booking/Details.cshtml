@@ -1,0 +1,95 @@
+﻿
+@model ApplicationCore.Models.BookingDetailsModel
+
+@{
+    ViewData["Title"] = "BookingDetails";
+}
+
+<h1>Booking Detail</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookingDate)
+        </dt>
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.BookingDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookingTime)
+        </dt>
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.BookingTime)
+        </dd>
+        <dt class="col-sm-2">
+            FromPlace
+        </dt>
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.FPlace.PlaceName)
+        </dd>
+        <dt class="col-sm-2">
+            ToPlace
+        </dt>
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.TPlace.PlaceName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PickUpAddress)
+        </dt>
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.PickUpAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Landmark)
+        </dt>
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.Landmark)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PickupDate)
+        </dt>
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.PickupDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PickupTime)
+        </dt>
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.PickupTime)
+        </dd>
+        <dt class="col-sm-2">
+            CabType
+        </dt>
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.Cab.CabTypeName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContactNo)
+        </dt>
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.ContactNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd class="col-sm-12">
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-controller="Home" asp-action="Index">Back to List</a>
+</div>

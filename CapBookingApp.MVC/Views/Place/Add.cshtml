@@ -1,0 +1,29 @@
+﻿@model ApplicationCore.Models.PlaceModel
+
+@{
+    ViewData["Title"] = "AddPlace";
+}
+
+<h1>Add new Place</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Add">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PlaceName" class="control-label"></label>
+                (do not add duplicate place name)
+                <input asp-for="PlaceName" class="form-control" />
+                <span asp-validation-for="PlaceName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="Index">Back to Homepage</a>
+</div>
